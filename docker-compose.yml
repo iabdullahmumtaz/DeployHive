@@ -1,0 +1,19 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "6012:6012"
+    environment:
+      - PORT=6012
+      - CLIENT_URL=http://localhost:5012
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - deployhive_data:/app/deployments
+      - deployhive_repos:/app/repos
+    restart: unless-stopped
+
+volumes:
+  deployhive_data:
+  deployhive_repos:
