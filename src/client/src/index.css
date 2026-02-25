@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-hive-bg text-white font-sans antialiased; }
+
+.status-ready { @apply bg-green-500/20 text-green-400 border-green-500/30; }
+.status-deploying, .status-building, .status-queued { @apply bg-yellow-500/20 text-yellow-400 border-yellow-500/30; }
+.status-failed { @apply bg-red-500/20 text-red-400 border-red-500/30; }
+.status-idle { @apply bg-zinc-500/20 text-zinc-400 border-zinc-500/30; }
+.input { @apply w-full bg-hive-bg border border-hive-border rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-hive-accent/40; }
